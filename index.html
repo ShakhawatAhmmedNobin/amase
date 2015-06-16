@@ -29,11 +29,11 @@
         <img src="./icons/infoMain.png" alt="Read the infos about this page" title="Page Info">
     </div>
     <div id="loginForm">
-        <p>Welcome <b>Marvin Hofmann</b>! You are logged in as <b>supervisor</b> | <a class="logout" href="logout.php">Logout</a>
+        <p>Welcome <b>Marvin Hofmann</b>! You are logged in as <b>supervisor</b> | <a class="logout" href="#home">Logout</a>
         </p>
     </div>
     <div id="loginForm">
-        <form class="form-inline" name="form1" method="post" action="index.php">
+        <form class="form-inline" name="form1">
             <div class="form-group">
                 <label class="sr-only" for="username">Username</label>
                 <input type="text" maxlength="50" class="form-control" id="username" placeholder="Your username">
@@ -67,7 +67,7 @@
         </div>
     </div>
     <div id="search">
-        <form class="form-inline" method="post" action="index.php?template=0">
+        <form class="form-inline">
             <div class="form-group">
                 <label class="sr-only" for="search">Search</label>
                 <input type="text" size="35" maxlength="50" class="form-control" name="search" placeholder="Search">

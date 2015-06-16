@@ -67,11 +67,11 @@ body {
 }
 
 #navi {
-    width: 855px;
+    width: 1140px;
     background: #2B547E;
     color: #fff;
     margin: 0 auto;
-    padding: 10px 10px 10px 40px;
+    padding: 10px 10px 10px 190px;
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
@@ -96,10 +96,10 @@ body {
 }
 
 #search {
-    width: 855px;
+    width: 1140px;
     margin: 0 auto;
     background: #2B547E;
-    padding: 10px 10px 10px 170px;
+    padding: 10px 10px 10px 330px;
     color: #fff;
 }
 
