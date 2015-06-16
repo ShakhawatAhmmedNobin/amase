@@ -12,6 +12,11 @@ amaseApp.config(['$routeProvider',
                 controller: 'HomeCtrl',
                 activetab: 'home'
             }).
+            when('/students', {
+                templateUrl: 'html/home.html',
+                controller: 'HomeCtrl',
+                activetab: 'students'
+            }).
             otherwise({
                 redirectTo: '/home'
             });
