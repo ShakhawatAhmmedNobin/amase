@@ -1,4 +1,4 @@
-var amaseControllers = angular.module('amaseControllers');
+var amaseControllers = angular.module('amaseControllers', []);
 
 amaseControllers.controller('amaseCtrl', ['$scope', '$http', '$interval', '$route',
     function ($scope, $http, $interval, $route) {
