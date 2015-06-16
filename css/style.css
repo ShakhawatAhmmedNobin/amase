@@ -2,74 +2,118 @@
  * blank file for includes.
  */
 
-
 /*
 COLORS I USE:
     #F88017;    orange
     #2B547E;    blue
 */
 
+body {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    background: url(../icons/bg2.jpg);
+}
 
-body { font-family: Geneva, Arial, Helvetica, sans-serif; background: url(../icons/bg2.jpg); }
+img.actions {
+    cursor: pointer
+}
 
-img.actions { cursor: pointer }
+#topBox {
+    width: 100%;
+    height: 30px;
+    border-top: 5px solid #2B547E;
+    background: url(../icons/bg_main_content.jpg);
+}
 
-#topBox { width: 100%; height: 30px; border-top: 5px solid #2B547E; background: url(../icons/bg_main_content.jpg); }
-#loginForm { width: auto; background: #2B547E; color: #fff; float: right; margin: 0 100px 0 0; padding: 10px; -webkit-border-radius: 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px; }
+#loginForm {
+    width: auto;
+    background: #2B547E;
+    color: #fff;
+    float: right;
+    margin: 0 100px 0 0;
+    padding: 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
 
-#infoBox { width: auto; background: #2B547E; color: #fff; float: left; margin: 0 0 0 100px; padding: 10px; -webkit-border-radius: 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px; }
+#infoBox {
+    width: auto;
+    background: #2B547E;
+    color: #fff;
+    float: left;
+    margin: 0 0 0 100px;
+    padding: 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
 
+#secondColumn {
+    width: 100%;
+    background: url(../icons/bg_main_content.jpg);
+    padding: 5px 0;
+}
 
-#secondColumn { width: 100%; background: url(../icons/bg_main_content.jpg); padding: 5px 0; }
-#logo { width: 300px; margin: 0 auto; background: url(../icons/bg_main_content.jpg); }
-#logo img { padding: 10px 0 5px 0; }
+#logo {
+    width: 300px;
+    margin: 0 auto;
+    background: url(../icons/bg_main_content.jpg);
+}
 
+#logo img {
+    padding: 10px 0 5px 0;
+}
 
-#thirdColumn { width: 100%; background: url(../icons/bg_main_content.jpg); border-bottom: 5px solid #2B547E; }
-#navi { width: 555px; background: #2B547E; color: #fff; margin: 0 auto; padding: 10px; -webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0; }
-#navi a { color: #fff; }
-#navi a:visited { color: #fff;}
-#navi a:hover {  color: #F88017;}
-#navi a.active { color: #F88017; }
-#search { width: 555px; margin: 0 auto; background: #2B547E; padding: 10px; color: #fff; }
+#thirdColumn {
+    width: 100%;
+    background: url(../icons/bg_main_content.jpg);
+    border-bottom: 5px solid #2B547E;
+}
 
+#navi {
+    width: 855px;
+    background: #2B547E;
+    color: #fff;
+    margin: 0 auto;
+    padding: 10px 10px 10px 40px;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+}
 
-#newEntry { float: left; width: 75px; margin: 10px 0 10px 30px; padding: 10px; font-weight: 700; background: #2B547E; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
-#newEntry a{ color: #fff; font-size: 16px; }
-#newEntry img { }
-#newEntry a:hover { color: #F88017; text-decoration: underline; }
+#navi a {
+    color: #fff;
+}
 
-#footer { margin: 30px 0 0 0; width: 100%; background: #2B547E; bottom: 0; height: auto; padding: 10px 0; color: #fff; font-weight: 600; text-align: center; }
+#navi a:visited {
+    color: #fff;
+}
 
-.tableHeader { background: #2B547E; color: #fff; }
+#navi a:hover {
+    color: #F88017;
+}
 
-#extras { float: right; color: #2B547E; width: 200px; margin: 10px 20px 10px 0; padding: 0 5px; }
+#navi a.active {
+    color: #F88017;
+}
 
-form#ExportTable { margin: 10px 0 10px 30px; }
-#bgForOutput { background: url(../icons/bg2.jpg) repeat; padding: 20px; }
-.bgForOutput { background: url(../icons/bg2.jpg) repeat; }
-table table { border-collapse: separate; }
+#search {
+    width: 855px;
+    margin: 0 auto;
+    background: #2B547E;
+    padding: 10px 10px 10px 170px;
+    color: #fff;
+}
 
-#editGradesMessage { background: #F88017; padding: 10px; color: #2B547E; margin: -140px 0 0 0; }
-#blueBG { background: #2B547E; }
-
-#pages { text-align:center; margin: 10px auto; padding: 10px 0; background: #2B547E; color: #fff; width: 180px; font-size: 14px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
-#pages a { color: #fff; }
-
-a.logout { font-size: 15px; }
-
-#messageForm {
-    text-align: center;
-    color: #2b547e;
-    background: #E1F5A9;
-    display: none;
+#footer {
+    margin: 30px 0 0 0;
+    width: 100%;
+    background: #2B547E;
+    bottom: 0;
+    height: auto;
     padding: 10px 0;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
 }
 
-.dropped {
-    background-color: #f69393;
-}
-
-.completed {
-    background-color: #c2fa7a;
-}

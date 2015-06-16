@@ -57,7 +57,12 @@
                 <ul class="nav navbar-nav">
                     <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#home">Home</a></li>
                     <li ng-class="{active: $route.current.activetab == 'students'}"><a href="#students">Students</a></li>
-                    <li><a href="index.php?page=logout">Logout</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'grades'}"><a href="#grades">Grades</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'master'}"><a href="#master">Master's Thesis</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'courses'}"><a href="#courses">Courses</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'users'}"><a href="#users">Users</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'statistics'}"><a href="#users">Statistics</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'settings'}"><a href="#settings">Settings</a></li>
                 </ul>
             </div>
             <!--
