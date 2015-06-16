@@ -7,7 +7,7 @@ var amaseApp = angular.module('amaseApp', [
 amaseApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/machine', {
+            when('/home', {
                 templateUrl: 'html/home.html',
                 controller: 'HomeCtrl',
                 activetab: 'home'

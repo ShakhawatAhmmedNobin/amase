@@ -24,48 +24,66 @@
     <![endif]-->
 </head>
 <body ng-controller="amaseCtrl">
-<div class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand">AmaseBase</a>
+
+    <div id ="topBox">
+        <div id ="infoBox">
+            <img src="./icons/infoMain.png" alt="Read the infos about this page" title="Page Info" onclick="javascript:poptastic2('infoTemplates.php?template=0')">
         </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#machine">Home</a></li>
-                <li ng-class="{active: $route.current.activetab == 'students'}"><a href="#drive">Students</a></li>
-                <li><a href="index.php?page=logout">Logout</a></li>
-            </ul>
+        <div id ="loginForm">
+            <p>Welcome <b>Marvin Hofmann</b>! You are logged in as <b>supervisor</b> | <a class="logout" href="logout.php">Logout</a></p>
         </div>
     </div>
-</div>
-
-<div ng-view></div>
-
-<div class="navbar navbar-inverse">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand">Resources</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a>Hey there, {{user.username}}</a></li>
-            </ul>
+    <div id ="secondColumn">
+        <div id="logo">
+            <img src="https://amase-master.net/amasebase2/head_logo.png" alt="AmaseBase">
         </div>
     </div>
-</div>
+    <div id="thirdColumn">
+        <div id="navi">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#home">Home</a></li>
+                        <li ng-class="{active: $route.current.activetab == 'students'}"><a href="#students">Students</a></li>
+                        <li><a href="index.php?page=logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--
+            <b>
+                <a class="active" href="/amasebase2/index.php?template=0">Students</a>
+            </b>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a href="/amasebase2/index.php?template=1">Grades</a>
+            <a href="/amasebase2/index.php?template=2">Master's Thesis</a>
+            <a href="/amasebase2/index.php?template=3">Courses</a>
+            <a href="/amasebase2/index.php?template=4">Users</a>
+            <a href="statistics.php">Statistics</a>
+            -->
+        </div>
+        <div id ="search">
+            <form id="searchform" name="searchform" method="post" action="index.php?template=0">
+                Search: <input name="search" type="text" size="20" maxlength="50" value="">
+                <input type="submit" name="Submit" value="search">
+            </form>
+        </div>
+    </div>
 
+
+    <div ng-view></div>
+
+
+    <div id="pagesDown"></div>
+    <div id="footer">
+        AmaseBASE System 2015. <br/>Design & Development: Marvin Hofmann
+    </div>
 
 </body>
 </html>

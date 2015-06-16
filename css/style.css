@@ -1,3 +1,217 @@
 /*
  * blank file for includes.
  */
+
+
+/*
+COLORS I USE:
+    #F88017;    orange
+    #2B547E;    blue
+*/
+body { font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; text-decoration: none; color: #000; background: url(../icons/bg2.jpg); margin: 0; padding: 0; }
+a { font-size: 12px; text-decoration: underline; color: #2B547E; }
+a:visited { font-size: 12px; text-decoration: underline; color: #2B547E; }
+a:hover { font-size: 12px; text-decoration: underline; color: #F88017; }
+
+a.infoBox {
+    border-bottom: 1px dashed #c30;
+    text-decoration:none;
+}
+
+a.infoBox:hover {
+    cursor:help;
+    color:#c30;
+    background:white;
+}
+
+a.infoBox span {
+    visibility:hidden;
+    position:absolute;
+    left:16em;
+    top:5em;
+    margin-top:1.5em;
+    padding:1em;
+    line-height: 1.5;
+    text-decoration:none;
+}
+a.infoBox:hover span {
+
+    visibility:visible;
+    border:1px solid #c30;
+    display:block;
+    width:25em;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #000000;
+    background:white;
+}
+
+th a { font-size: 14px; text-decoration: none; color: #fff; }
+th a:visited { 	font-size: 14px; text-decoration: none; color: #fff; }
+th a:hover { font-size: 14px; text-decoration: none; color: #F88017; }
+tr td {	font-size: 12px; text-decoration: none; color: #000000; }
+
+.ueberschrift {
+    font-size: 14px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+.ueberschrift_page {
+    font-size: 22px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+.col { font-size: 14px; color: #fff; text-decoration: underline; white-space: nowrap;  }
+.active_col { font-size: 14px; color: #F88017; text-decoration: underline; white-space: nowrap; }
+.not_linked { color: #fff; font-size: 14px; text-decoration: none; }
+
+.footer { font-size: 12px; color: #999999; }
+
+.box {
+    background-color: #EAEAEA;
+    padding: 4px;
+    border: 1px dashed #000000;
+}
+
+.box td {
+    font-size: 16px;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+textarea:focus {
+    background-color: #C9E5FC;
+}
+
+
+
+.preselected  {
+    /* color: #FF9A66; */
+    font-weight:bold
+}
+
+.tabellen_layout { font-size: 12px; border-color: #2B547E; border: thin solid #2B547E; border-collapse: collapse; }
+.tabellen_layout2 { font-size: 12px; border-collapse: collapse; text-align: center; }
+
+DIV.shadow2, DIV.shadow3, DIV.shadow4, DIV.shadow5 {
+    padding: 1px 1px 1px 1px;
+    /* border-radius: 10px; */
+    -moz-border-radius: 10px;
+}
+
+input {
+    border:1px solid #AAAAAA;
+}
+
+input:focus {
+    background-color: #C9E5FC;
+}
+
+input[type="password"]:focus {
+    background-color: #C9E5FC;
+}
+
+table.errortable {
+    border-collapse: collapse;
+}
+
+tr.error  {
+    border: 1px solid #FF0000;
+    border-spacing: 40px;
+}
+
+/* Different coloring for each status-case: */
+tr.open  { background: #FFFBCC; }
+tr.grade  { background: #E1F5A9; }
+tr.failed  { background: #FFD4D4; }
+/* Different coloring for each status-case: */
+
+td.grades {
+    border-bottom:2px solid #000000;
+    border-spacing:0px;
+}
+
+td#modulname {
+    font-size:18px;
+    border-bottom:2px solid #000000;
+    border-spacing:0px;
+}
+
+table.texttable {
+    border-spacing: 5px;
+    background-color: #CFECEC;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+img.actions { cursor: pointer }
+
+#topBox { width: 100%; height: 30px; border-top: 5px solid #2B547E; background: url(../icons/bg_main_content.jpg); }
+#loginForm { width: auto; background: #2B547E; color: #fff; float: right; margin: 0 100px 0 0; padding: 10px; -webkit-border-radius: 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px; }
+#loginForm p { margin: 0 5px 5px 5px; }
+#loginForm a { color: #F88017; font-weight: 900; text-decoration: none; }
+#loginForm a:hover { text-decoration:  underline; }
+#infoBox { width: auto; background: #2B547E; color: #fff; float: left; margin: 0 0 0 100px; padding: 10px; -webkit-border-radius: 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px; }
+#infoBox img { cursor: pointer; }
+#infoPage { padding: 20px; }
+#infoPage ul li { padding: 10px 0; }
+
+
+#secondColumn { width: 100%; background: url(../icons/bg_main_content.jpg); padding: 5px 0; }
+#logo { width: 300px; margin: 0 auto; background: url(../icons/bg_main_content.jpg); }
+#logo img { padding: 10px 0 5px 0; }
+
+
+#thirdColumn { width: 100%; background: url(../icons/bg_main_content.jpg); border-bottom: 5px solid #2B547E; }
+#navi { width: 555px; background: #2B547E; color: #fff; margin: 0 auto; padding: 10px; -webkit-border-radius: 10px 10px 0 0; -moz-border-radius: 10px 10px 0 0; border-radius: 10px 10px 0 0; }
+#navi a { font-size: 17px; color: #fff; text-decoration: none; }
+#navi a:visited { font-size: 17px; color: #fff; text-decoration: none; }
+#navi a:hover { font-size: 17px; color: #F88017; text-decoration: underline; }
+#navi a.active { color: #F88017; text-decoration: underline; }
+#search { width: 555px; margin: 0 auto; background: #2B547E; padding: 10px; color: #fff; }
+#searchform { margin: 0 0 0 50px; }
+
+#newEntry { float: left; width: 75px; margin: 10px 0 10px 30px; padding: 10px; font-weight: 700; background: #2B547E; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+#newEntry a{ color: #fff; font-size: 16px; }
+#newEntry img { }
+#newEntry a:hover { color: #F88017; text-decoration: underline; }
+
+#footer { margin: 30px 0 0 0; width: 100%; background: #2B547E; bottom: 0; height: auto; padding: 10px 0; color: #fff; font-weight: 600; text-align: center; }
+
+.tableHeader { background: #2B547E; color: #fff; }
+
+#extras { float: right; color: #2B547E; width: 200px; margin: 10px 20px 10px 0; padding: 0 5px; }
+
+form#ExportTable { margin: 10px 0 10px 30px; }
+#bgForOutput { background: url(../icons/bg2.jpg) repeat; padding: 20px; }
+.bgForOutput { background: url(../icons/bg2.jpg) repeat; }
+table table { border-collapse: separate; }
+
+#editGradesMessage { background: #F88017; padding: 10px; color: #2B547E; margin: -140px 0 0 0; }
+#blueBG { background: #2B547E; }
+
+#pages { text-align:center; margin: 10px auto; padding: 10px 0; background: #2B547E; color: #fff; width: 180px; font-size: 14px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
+#pages a { color: #fff; }
+
+a.logout { font-size: 15px; }
+
+#messageForm {
+    text-align: center;
+    color: #2b547e;
+    background: #E1F5A9;
+    display: none;
+    padding: 10px 0;
+}
+
+.dropped {
+    background-color: #f69393;
+}
+
+.completed {
+    background-color: #c2fa7a;
+}
