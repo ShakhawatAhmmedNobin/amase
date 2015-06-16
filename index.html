@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="./css/bootstrap-flatly.min.css" />
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap-superhero.min.css" />
     <link type="text/css" rel="stylesheet" href="./css/style.css">
     <link rel="SHORTCUT ICON" href="./icons/ico.ico" type="image/x-icon" />
     <script type="text/javascript" src="./lib/jquery-2.1.4.min.js"></script>
@@ -27,10 +27,23 @@
 
     <div id ="topBox">
         <div id ="infoBox">
-            <img src="./icons/infoMain.png" alt="Read the infos about this page" title="Page Info" onclick="javascript:poptastic2('infoTemplates.php?template=0')">
+            <img src="./icons/infoMain.png" alt="Read the infos about this page" title="Page Info">
         </div>
         <div id ="loginForm">
             <p>Welcome <b>Marvin Hofmann</b>! You are logged in as <b>supervisor</b> | <a class="logout" href="logout.php">Logout</a></p>
+        </div>
+        <div id ="loginForm">
+            <form class="form-inline" name="form1" method="post" action="index.php">
+                <div class="form-group">
+                    <label class="sr-only" for="username">Username</label>
+                    <input type="text" maxlength="50" class="form-control" id="username" placeholder="Your username">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="password">Password</label>
+                    <input type="password" maxlength="30" class="form-control" id="password" placeholder="Your password">
+                </div>
+                <input class="btn btn-default" type="submit" name="Submit" value="Login">
+            </form>
         </div>
     </div>
     <div id ="secondColumn">
@@ -69,9 +82,12 @@
             -->
         </div>
         <div id ="search">
-            <form id="searchform" name="searchform" method="post" action="index.php?template=0">
-                Search: <input name="search" type="text" size="20" maxlength="50" value="">
-                <input type="submit" name="Submit" value="search">
+            <form class="form-inline" method="post" action="index.php?template=0">
+                <div class="form-group">
+                    <label class="sr-only" for="search">Search</label>
+                    <input type="text" size="35" maxlength="50" class="form-control" name="search" placeholder="Search">
+                </div>
+                <input class="btn btn-default" type="submit" name="Submit" value="Start Search">
             </form>
         </div>
     </div>
