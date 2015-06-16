@@ -54,21 +54,11 @@
     <div id="thirdColumn">
         <div id="navi">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#home">Home</a></li>
-                        <li ng-class="{active: $route.current.activetab == 'students'}"><a href="#students">Students</a></li>
-                        <li><a href="index.php?page=logout">Logout</a></li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active: $route.current.activetab == 'home'}"><a href="#home">Home</a></li>
+                    <li ng-class="{active: $route.current.activetab == 'students'}"><a href="#students">Students</a></li>
+                    <li><a href="index.php?page=logout">Logout</a></li>
+                </ul>
             </div>
             <!--
             <b>
