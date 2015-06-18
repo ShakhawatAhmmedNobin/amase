@@ -5,7 +5,7 @@
  * Date: 18.06.15
  * Time: 12:53
  */
-include_once("./db.php");
+include_once("./include/db.php");
 class Base {
 
     private $connection;
