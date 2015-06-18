@@ -10,4 +10,5 @@ error_reporting(E_ALL);
 
 include("./include/Base.php");
 
-new Base();
+$base = new Base();
+echo var_dump($base->getUser(1));

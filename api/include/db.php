@@ -14,7 +14,8 @@ function make_connection(){
      * static $pass = "2LgjBsowNI0SEHsBQlVS";
      * static $datenbank = "d004ec9e"
      * */
-    $host = "localhost";
+    //$host = "localhost";
+    $host = "eusmat.net";
     $user = "d01e8562";
     $password = "QtGUrBcqHYgM2w9L";
     $database = "d01e8562";
