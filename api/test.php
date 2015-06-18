@@ -6,6 +6,6 @@
  * Time: 12:48
  */
 
-include("./include/db.php");
+include("./include/Base.php");
 
-echo $text;
+new Base();
