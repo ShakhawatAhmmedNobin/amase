@@ -3,7 +3,9 @@
  * Created by PhpStorm.
  * User: marvin
  * Date: 18.06.15
- * Time: 12:47
+ * Time: 12:48
  */
 
-$text = "working!";
+include("./include/db.php");
+
+echo $text;
