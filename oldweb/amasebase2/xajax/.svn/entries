@@ -1,0 +1,88 @@
+8
+
+dir
+34
+file:///C:/subversion/amasebase/xajax
+file:///C:/subversion/amasebase
+
+
+
+2008-02-12T17:15:15.406250Z
+34
+Daniel
+
+
+svn:special svn:externals svn:needs-lock
+
+LICENSE.txt
+file
+
+
+
+
+2006-04-21T12:55:00.000000Z
+80d5280342ccaa1edf2a4b1c87a47d94
+2008-02-12T17:15:15.406250Z
+34
+Daniel
+
+tests
+dir
+
+lib
+dir
+
+xajax_js
+dir
+
+xajaxResponse.inc.php
+file
+
+
+
+
+2008-02-12T17:15:16.609375Z
+96ad4c7a217a99f1602722743dc19497
+2008-02-12T17:15:15.406250Z
+34
+Daniel
+has-props
+
+xajax.inc.php
+file
+
+
+
+
+2008-02-12T17:15:16.531250Z
+89cee458ca06f4db8e6b0e0446f692a4
+2008-02-12T17:15:15.406250Z
+34
+Daniel
+has-props
+
+README.txt
+file
+
+
+
+
+2007-05-16T06:25:34.000000Z
+19314ac0bce2b194aaa9ca91f1ddca18
+2008-02-12T17:15:15.406250Z
+34
+Daniel
+
+xajaxCompress.php
+file
+
+
+
+
+2008-02-12T17:15:16.562500Z
+9399c53e5b8f89d9bb4dec63135d5a74
+2008-02-12T17:15:15.406250Z
+34
+Daniel
+has-props
+
