@@ -294,8 +294,7 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
                 $pdf->Cell(20,7, number_format( $ects_sum_languages, 1), 1, 0, 'C');
             }
             if ($module_summe_gradedEcts != 0.0) {
-                $average_master = number_format(convert_grade(($module_summe_gradesXEctsGrades/$module_summe_gradedEcts), 'UDS'),1);
-                $pdf->Cell(20,7, substr( $average_master, 0, 3),1,0,'C');
+                $pdf->Cell(20,7, substr( ($module_summe_gradesXEctsGrades/$module_summe_gradedEcts), 0, 3),1,0,'C');
             }else{
                 $pdf->Cell(20,7, "--",1,0,'C');
             }
@@ -446,8 +445,7 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
             $pdf->SetXY($modulX, $modulY);	
 			$pdf->SetFont('Univers57cn','b',$courseSize);
             $pdf->Cell(20,7, number_format( $partner_uni_ects, 1), 1, 0, 'C');
-            $averagestuffshit = number_format(convert_grade( ($module_summe_gradesXEctsGrades/$module_summe_gradedEcts), 'UDS'),1);
-			if ($module_summe_gradedEcts != 0.0)  $pdf->Cell(20,7, substr($averagestuffshit , 0, 3),1,0,'C');
+			if ($module_summe_gradedEcts != 0.0)  $pdf->Cell(20,7, substr(($module_summe_gradesXEctsGrades/$module_summe_gradedEcts) , 0, 3),1,0,'C');
             else $pdf->Cell(20,7, "--",1,0,'C');
             $pdf->Cell(20,7, "", 1, 0, 'C');
 			 $pdf->SetXY($actX, $actY);

@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/amasebase/
+RewriteCond %{REQUEST_URI} !^/amasetestbase/
+RewriteCond %{REQUEST_URI} !^/amasebase2/
+RewriteCond %{REQUEST_URI} !^/docmase/
+RewriteCond %{REQUEST_URI} !^/application/
+RewriteCond %{REQUEST_URI} !^/doktorand/
+RewriteRule (.*) http://www.uni-saarland.de/einrichtung/eusmat/international-studies/master/amase.html [R=301]
