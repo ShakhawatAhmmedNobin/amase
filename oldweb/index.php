@@ -33,14 +33,14 @@
     // zum mySQL-Server verbinden
     if (!($db_link)) die ("Could not connect to database - Error #21 - SQL-Message: ". mysql_error());
 
-    // Datenbank auswählen
+    // Datenbank auswï¿½hlen
     mysql_select_db($datenbank) OR die("Database does not exist or is unreachable - Error #22 - SQL-Message: " . mysql_error());
-    // Tabelle auf existenz prüfen & Anzahl der Datensätze ermitteln
+    // Tabelle auf existenz prï¿½fen & Anzahl der Datensï¿½tze ermitteln
     $result = mysql_query("SELECT * FROM $tabellen[$template]") OR die("table not existing - Error #24 - SQL-Message: " . mysql_error());
     $num_rows_default = mysql_num_rows($result); 	   
     
-    // Überprüfe ob user und passwort ok sind
-    // Username und Passwort gesetzt? Wenn ja überprüfe auf Konsistenz. Wenn nicht Clean setze user + pass leeren string. wird unten wichtig
+    // ï¿½berprï¿½fe ob user und passwort ok sind
+    // Username und Passwort gesetzt? Wenn ja ï¿½berprï¿½fe auf Konsistenz. Wenn nicht Clean setze user + pass leeren string. wird unten wichtig
     if ( isset($_POST['username']) && isset($_POST['passwort']) ) {    	
     	$_POST['username'] = strtolower($_POST['username']);
     	if (is_valid_email($_POST['username']) && is_valid_pass($_POST['passwort'])) {
@@ -113,7 +113,7 @@
     </div>
 <?php
     list($HEADER, $HEADERSIZE) = build_cols_array($template);   // Spaltennamen aus Datenbank lesen
-    // Assoziatives Array erstellen, das als Schlüssel die tabellennamen und als Inhalt das Spaltentemplate hat
+    // Assoziatives Array erstellen, das als Schlï¿½ssel die tabellennamen und als Inhalt das Spaltentemplate hat
     // var_dump($HEADER);
     // var_dump(get_template($template));
     $sqlcols_and_tabletemplates = array_combine_php5($HEADER,get_template($template));
@@ -128,15 +128,15 @@
     // Sortierkriterium von SQL Syntax befreien
     if (isset($_GET['with'])) $_GET['with'] = clean_from_sql($_GET['with']);
 
-    if (isset($_GET['limit'])) { if (!(in_array($_GET['limit'], $HEADER))) { unset($_GET['limit']); } } // Wenn übergebene Spalten-Einschränkung kein Spaltenname ist, dann lösche Einschränkung
+    if (isset($_GET['limit'])) { if (!(in_array($_GET['limit'], $HEADER))) { unset($_GET['limit']); } } // Wenn ï¿½bergebene Spalten-Einschrï¿½nkung kein Spaltenname ist, dann lï¿½sche Einschrï¿½nkung
 
-    if (isset($_GET['ordnung'])) {  // Wenn übergebene Spaltenordnung kein Spaltenname ist, dann lösche Ordnung
+    if (isset($_GET['ordnung'])) {  // Wenn ï¿½bergebene Spaltenordnung kein Spaltenname ist, dann lï¿½sche Ordnung
             if (!(in_array($_GET['ordnung'], $HEADER))) { unset($_GET['ordnung']); }
     } else {
             if ($_SESSION['html_template'] != 4) $_GET['ordnung'] = $StandardOrdnung;
     }
 
-//    if (is_logged_in()) {   // Zeige "hinzufügen", wenn eingeloggt
+//    if (is_logged_in()) {   // Zeige "hinzufï¿½gen", wenn eingeloggt
 //            if ($template == 0) $new_entry = "newstud.png"; // For the students table
 //            else $new_entry = "newrec.png"; // For the Grades, Master Thesis, Courses tables
 //            
@@ -153,15 +153,15 @@
     
 ########### Searching
     if (isset($_POST['search']) && ( strlen($_POST['search']) >= 2 )) {
-        $search = clean_from_sql($_POST['search']); // Von schädlichem Code befreien
+        $search = clean_from_sql($_POST['search']); // Von schï¿½dlichem Code befreien
 
-        $SuchString_array = explode("," , $search_string[$template]);   // Die Suchspalten aus config berücksichtigen
+        $SuchString_array = explode("," , $search_string[$template]);   // Die Suchspalten aus config berï¿½cksichtigen
 
-        $query = "SELECT * FROM $tabellen[$template] WHERE ";   // Select Statement für den Query vorbereiten
+        $query = "SELECT * FROM $tabellen[$template] WHERE ";   // Select Statement fï¿½r den Query vorbereiten
 
-        $query .= array_pop($SuchString_array) . " LIKE '%$search%'";   // Das letzte Element zur Suche hinzufügen. Wenns das einzige war, dann ist das Array leer		 
+        $query .= array_pop($SuchString_array) . " LIKE '%$search%'";   // Das letzte Element zur Suche hinzufï¿½gen. Wenns das einzige war, dann ist das Array leer		 
 
-        foreach ($SuchString_array as $SuchString) {    // Für jede weitere Spalte, in der gesucht wird, verlängert sich die SQL Anweisung
+        foreach ($SuchString_array as $SuchString) {    // Fï¿½r jede weitere Spalte, in der gesucht wird, verlï¿½ngert sich die SQL Anweisung
                 $query .= " OR $SuchString LIKE '%$search%'";
         }	
         $query .= ";";

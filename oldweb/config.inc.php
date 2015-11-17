@@ -37,7 +37,7 @@
     $admin_only_col = array();  // columns only for the admins
     ### Dont's  
 
-    $pfad = "/amasebase2";  // Unterverzeichnis des Programms auf dem Webserver z.b. /amasebase
+    $pfad = "/amasebase/old";  // Unterverzeichnis des Programms auf dem Webserver z.b. /amasebase
 
     $ProtocolPrefix = isset($_SERVER['HTTPS']) ? "https://" : "http://";    // Protokoll bestimmen ob HTTPS oder HTTP
 
@@ -77,7 +77,7 @@
     $templateArray = array($template0, $template1, $template2, $template3, $template4);		
     #### Templates
 
-    // Suchfelder für Volltextsuche in Tabellen. For template 0, 1, 2, 3
+    // Suchfelder fï¿½r Volltextsuche in Tabellen. For template 0, 1, 2, 3
     $search_string = array( "id, vorname, nachname, country_birth, birth_place, email", "id, name, coursename, modul, university" , 
                             "id, name, projectname, wer", "english_description, local_description, code, university",
                             "fullname, firma, status");
@@ -146,7 +146,7 @@
             "Track 5: Bio/Nanomaterials (including special applications)",
 			"Zusaetzliche Leistung", "Freiwillige Zusatzkurse"); 
     
-        // Notendruck für Master-Zeugnis
+        // Notendruck fï¿½r Master-Zeugnis
     static $PrintTranscriptCourses = array ("Module 1", "Module 2", "Module 3", "Module 4", "Language", "Special courses", "Module I", "Module II", 
             "Module III", "Track 1: Advanced Metallic Materials - Design, characterization and processing", 
             "Track 2: Polymers and Composites - Modelling, processing & tailored properties",
@@ -227,7 +227,7 @@
    
     $query = "SELECT * FROM ";  // Default Query
 
-    // Konstanten für Logging-Funktion (log_this)
+    // Konstanten fï¿½r Logging-Funktion (log_this)
     define('CHANGE', 0);
     define('INSERT', 1);
     define('DELETE', 2);
