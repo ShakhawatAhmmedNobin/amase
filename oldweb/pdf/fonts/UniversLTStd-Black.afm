@@ -1,0 +1,633 @@
+StartFontMetrics 3.0
+Notice © 1987, 1991, 1993, 1994, 1999, 2002 Adobe Systems
+FontName UniversLTStd-Black
+EncodingScheme FontSpecific
+FullName UniversLTStd Black
+FamilyName Univers LT Std 55
+Weight Bold
+IsFixedPitch false
+FontBBox -100 -281 1010 991
+CapHeight 724
+XHeight 498
+Descender -276
+Ascender 986
+ItalicAngle 0
+UnderlinePosition -100
+UnderlineThickness 50
+StartCharMetrics 224
+C 32 ; WX 333 ;
+C 33 ; WX 444 ;
+C 34 ; WX 500 ;
+C 35 ; WX 667 ;
+C 36 ; WX 667 ;
+C 37 ; WX 1000 ;
+C 38 ; WX 889 ;
+C 39 ; WX 333 ;
+C 40 ; WX 333 ;
+C 41 ; WX 333 ;
+C 42 ; WX 556 ;
+C 43 ; WX 660 ;
+C 44 ; WX 333 ;
+C 45 ; WX 333 ;
+C 46 ; WX 333 ;
+C 47 ; WX 278 ;
+C 48 ; WX 667 ;
+C 49 ; WX 667 ;
+C 50 ; WX 667 ;
+C 51 ; WX 667 ;
+C 52 ; WX 667 ;
+C 53 ; WX 667 ;
+C 54 ; WX 667 ;
+C 55 ; WX 667 ;
+C 56 ; WX 667 ;
+C 57 ; WX 667 ;
+C 58 ; WX 333 ;
+C 59 ; WX 333 ;
+C 60 ; WX 660 ;
+C 61 ; WX 660 ;
+C 62 ; WX 660 ;
+C 63 ; WX 556 ;
+C 64 ; WX 740 ;
+C 65 ; WX 833 ;
+C 66 ; WX 722 ;
+C 67 ; WX 778 ;
+C 68 ; WX 833 ;
+C 69 ; WX 667 ;
+C 70 ; WX 611 ;
+C 71 ; WX 833 ;
+C 72 ; WX 778 ;
+C 73 ; WX 333 ;
+C 74 ; WX 611 ;
+C 75 ; WX 778 ;
+C 76 ; WX 611 ;
+C 77 ; WX 1000 ;
+C 78 ; WX 833 ;
+C 79 ; WX 833 ;
+C 80 ; WX 722 ;
+C 81 ; WX 833 ;
+C 82 ; WX 722 ;
+C 83 ; WX 722 ;
+C 84 ; WX 667 ;
+C 85 ; WX 833 ;
+C 86 ; WX 778 ;
+C 87 ; WX 1000 ;
+C 88 ; WX 833 ;
+C 89 ; WX 778 ;
+C 90 ; WX 667 ;
+C 91 ; WX 333 ;
+C 92 ; WX 278 ;
+C 93 ; WX 333 ;
+C 94 ; WX 660 ;
+C 95 ; WX 500 ;
+C 96 ; WX 333 ;
+C 97 ; WX 611 ;
+C 98 ; WX 667 ;
+C 99 ; WX 611 ;
+C 100 ; WX 667 ;
+C 101 ; WX 611 ;
+C 102 ; WX 444 ;
+C 103 ; WX 667 ;
+C 104 ; WX 667 ;
+C 105 ; WX 333 ;
+C 106 ; WX 333 ;
+C 107 ; WX 667 ;
+C 108 ; WX 333 ;
+C 109 ; WX 1000 ;
+C 110 ; WX 667 ;
+C 111 ; WX 667 ;
+C 112 ; WX 667 ;
+C 113 ; WX 667 ;
+C 114 ; WX 444 ;
+C 115 ; WX 556 ;
+C 116 ; WX 444 ;
+C 117 ; WX 667 ;
+C 118 ; WX 611 ;
+C 119 ; WX 944 ;
+C 120 ; WX 611 ;
+C 121 ; WX 611 ;
+C 122 ; WX 556 ;
+C 123 ; WX 333 ;
+C 124 ; WX 278 ;
+C 125 ; WX 333 ;
+C 126 ; WX 660 ;
+C 127 ; WX 539 ;
+C 128 ; WX 667 ;
+C 129 ; WX 539 ;
+C 130 ; WX 333 ;
+C 131 ; WX 667 ;
+C 132 ; WX 667 ;
+C 133 ; WX 1000 ;
+C 134 ; WX 667 ;
+C 135 ; WX 667 ;
+C 136 ; WX 333 ;
+C 137 ; WX 1000 ;
+C 138 ; WX 722 ;
+C 139 ; WX 333 ;
+C 140 ; WX 1000 ;
+C 141 ; WX 539 ;
+C 142 ; WX 667 ;
+C 143 ; WX 539 ;
+C 144 ; WX 539 ;
+C 145 ; WX 333 ;
+C 146 ; WX 333 ;
+C 147 ; WX 667 ;
+C 148 ; WX 667 ;
+C 149 ; WX 500 ;
+C 150 ; WX 500 ;
+C 151 ; WX 1000 ;
+C 152 ; WX 333 ;
+C 153 ; WX 950 ;
+C 154 ; WX 556 ;
+C 155 ; WX 333 ;
+C 156 ; WX 1000 ;
+C 157 ; WX 539 ;
+C 158 ; WX 556 ;
+C 159 ; WX 778 ;
+C 160 ; WX 333 ;
+C 161 ; WX 444 ;
+C 162 ; WX 667 ;
+C 163 ; WX 667 ;
+C 164 ; WX 660 ;
+C 165 ; WX 667 ;
+C 166 ; WX 278 ;
+C 167 ; WX 667 ;
+C 168 ; WX 333 ;
+C 169 ; WX 800 ;
+C 170 ; WX 367 ;
+C 171 ; WX 667 ;
+C 172 ; WX 660 ;
+C 173 ; WX 333 ;
+C 174 ; WX 800 ;
+C 175 ; WX 333 ;
+C 176 ; WX 400 ;
+C 177 ; WX 660 ;
+C 178 ; WX 400 ;
+C 179 ; WX 400 ;
+C 180 ; WX 333 ;
+C 181 ; WX 667 ;
+C 182 ; WX 850 ;
+C 183 ; WX 333 ;
+C 184 ; WX 333 ;
+C 185 ; WX 400 ;
+C 186 ; WX 400 ;
+C 187 ; WX 667 ;
+C 188 ; WX 1000 ;
+C 189 ; WX 1000 ;
+C 190 ; WX 1000 ;
+C 191 ; WX 556 ;
+C 192 ; WX 833 ;
+C 193 ; WX 833 ;
+C 194 ; WX 833 ;
+C 195 ; WX 833 ;
+C 196 ; WX 833 ;
+C 197 ; WX 833 ;
+C 198 ; WX 1000 ;
+C 199 ; WX 778 ;
+C 200 ; WX 667 ;
+C 201 ; WX 667 ;
+C 202 ; WX 667 ;
+C 203 ; WX 667 ;
+C 204 ; WX 333 ;
+C 205 ; WX 333 ;
+C 206 ; WX 333 ;
+C 207 ; WX 333 ;
+C 208 ; WX 833 ;
+C 209 ; WX 833 ;
+C 210 ; WX 833 ;
+C 211 ; WX 833 ;
+C 212 ; WX 833 ;
+C 213 ; WX 833 ;
+C 214 ; WX 833 ;
+C 215 ; WX 660 ;
+C 216 ; WX 833 ;
+C 217 ; WX 833 ;
+C 218 ; WX 833 ;
+C 219 ; WX 833 ;
+C 220 ; WX 833 ;
+C 221 ; WX 778 ;
+C 222 ; WX 722 ;
+C 223 ; WX 778 ;
+C 224 ; WX 611 ;
+C 225 ; WX 611 ;
+C 226 ; WX 611 ;
+C 227 ; WX 611 ;
+C 228 ; WX 611 ;
+C 229 ; WX 611 ;
+C 230 ; WX 944 ;
+C 231 ; WX 611 ;
+C 232 ; WX 611 ;
+C 233 ; WX 611 ;
+C 234 ; WX 611 ;
+C 235 ; WX 611 ;
+C 236 ; WX 333 ;
+C 237 ; WX 333 ;
+C 238 ; WX 333 ;
+C 239 ; WX 333 ;
+C 240 ; WX 667 ;
+C 241 ; WX 667 ;
+C 242 ; WX 667 ;
+C 243 ; WX 667 ;
+C 244 ; WX 667 ;
+C 245 ; WX 667 ;
+C 246 ; WX 667 ;
+C 247 ; WX 660 ;
+C 248 ; WX 667 ;
+C 249 ; WX 667 ;
+C 250 ; WX 667 ;
+C 251 ; WX 667 ;
+C 252 ; WX 667 ;
+C 253 ; WX 611 ;
+C 254 ; WX 667 ;
+C 255 ; WX 611 ;
+EndCharMetrics
+StartKernData
+StartKernPairs 386
+KPX seven comma -150
+KPX D comma -25
+KPX F comma -230
+KPX J comma -25
+KPX O comma -25
+KPX P comma -240
+KPX T comma -170
+KPX U comma -25
+KPX V comma -150
+KPX W comma -80
+KPX Y comma -200
+KPX f comma -40
+KPX r comma -55
+KPX v comma -55
+KPX w comma -55
+KPX y comma -55
+KPX quoteleft comma -150
+KPX quoteright comma -150
+KPX quotedblleft comma -450
+KPX quotedblright comma -450
+KPX guilsinglright comma -25
+KPX guillemotleft comma -25
+KPX guillemotright comma -25
+KPX one hyphen -75
+KPX seven hyphen -40
+KPX A hyphen -25
+KPX F hyphen -50
+KPX L hyphen -130
+KPX P hyphen -80
+KPX T hyphen -175
+KPX V hyphen -100
+KPX Y hyphen -200
+KPX r hyphen -45
+KPX v hyphen -20
+KPX w hyphen -20
+KPX x hyphen -80
+KPX y hyphen -20
+KPX one period -125
+KPX seven period -170
+KPX D period -25
+KPX F period -230
+KPX J period -25
+KPX O period -25
+KPX P period -240
+KPX T period -170
+KPX U period -25
+KPX V period -150
+KPX W period -80
+KPX Y period -200
+KPX f period -40
+KPX r period -55
+KPX v period -55
+KPX w period -40
+KPX y period -55
+KPX quoteleft period -150
+KPX quoteright period -150
+KPX quotedblleft period -450
+KPX quotedblright period -450
+KPX guilsinglright period -25
+KPX guillemotleft period -25
+KPX guillemotright period -25
+KPX zero zero 40
+KPX one zero -55
+KPX zero one -55
+KPX one one -115
+KPX one two -25
+KPX one three -25
+KPX one four -45
+KPX seven four -55
+KPX one five -45
+KPX one six -45
+KPX seven six -40
+KPX one seven -50
+KPX one eight -45
+KPX one nine -45
+KPX T colon -120
+KPX V colon -55
+KPX W colon -20
+KPX Y colon -125
+KPX T semicolon -120
+KPX V semicolon -55
+KPX W semicolon -20
+KPX Y semicolon -125
+KPX space A -75
+KPX B A -20
+KPX C A -20
+KPX D A -55
+KPX F A -75
+KPX J A -40
+KPX O A -40
+KPX P A -95
+KPX S A -20
+KPX T A -115
+KPX U A -55
+KPX V A -95
+KPX W A -20
+KPX Y A -135
+KPX quoteleft A -150
+KPX quoteright A -150
+KPX quotedblleft A -150
+KPX quotedblright A -150
+KPX guilsinglright A -25
+KPX guillemotleft A -25
+KPX guillemotright A -50
+KPX A C -40
+KPX U C -20
+KPX V C -40
+KPX X C -35
+KPX Y C -100
+KPX A G -40
+KPX V G -40
+KPX F J -150
+KPX T J -150
+KPX A O -40
+KPX C O -20
+KPX K O -40
+KPX L O -25
+KPX T O -40
+KPX V O -40
+KPX W O -20
+KPX X O -40
+KPX Y O -75
+KPX quotedblleft O -40
+KPX A Q -40
+KPX A S -25
+KPX Y S -50
+KPX space T -200
+KPX A T -115
+KPX L T -115
+KPX O T -40
+KPX S T -20
+KPX quotedblbase T -175
+KPX guilsinglleft T -150
+KPX guilsinglright T -150
+KPX guillemotleft T -175
+KPX guillemotright T -175
+KPX A U -55
+KPX space V -75
+KPX A V -95
+KPX B V -20
+KPX D V -55
+KPX L V -120
+KPX O V -40
+KPX S V -30
+KPX quotedblbase V -150
+KPX guilsinglleft V -25
+KPX guilsinglright V -75
+KPX guillemotleft V -50
+KPX guillemotright V -75
+KPX space W -75
+KPX A W -20
+KPX L W -60
+KPX O W -20
+KPX R W 20
+KPX quotedblbase W -50
+KPX guillemotleft W -25
+KPX guillemotright W -40
+KPX O X -55
+KPX space Y -225
+KPX A Y -135
+KPX B Y -55
+KPX C Y -50
+KPX D Y -95
+KPX L Y -150
+KPX O Y -75
+KPX P Y -20
+KPX R Y -40
+KPX S Y -50
+KPX quotedblbase Y -225
+KPX guilsinglleft Y -100
+KPX guilsinglright Y -125
+KPX guillemotleft Y -150
+KPX guillemotright Y -175
+KPX F a -20
+KPX K a -20
+KPX L a 20
+KPX P a -40
+KPX S a -20
+KPX T a -115
+KPX V a -75
+KPX W a -20
+KPX Y a -150
+KPX v a -20
+KPX w a -20
+KPX y a -20
+KPX A c -20
+KPX S c -20
+KPX v c -20
+KPX w c -20
+KPX x c -40
+KPX y c -20
+KPX A d -20
+KPX w d -20
+KPX y d -20
+KPX quoteright d -115
+KPX A e -20
+KPX F e -20
+KPX K e -50
+KPX P e -40
+KPX S e -20
+KPX T e -115
+KPX V e -75
+KPX W e -20
+KPX X e -25
+KPX Y e -150
+KPX k e -20
+KPX v e -20
+KPX w e -20
+KPX x e -40
+KPX y e -20
+KPX z e -20
+KPX quoteleft e -80
+KPX quotedblleft e -100
+KPX f f -35
+KPX A g -20
+KPX y g -20
+KPX c h -50
+KPX T i 20
+KPX V i -20
+KPX Y i -35
+KPX f i 20
+KPX c k -50
+KPX f l 20
+KPX A o -20
+KPX F o -20
+KPX K o -50
+KPX P o -40
+KPX S o -20
+KPX T o -115
+KPX V o -75
+KPX W o -20
+KPX Y o -150
+KPX f o -20
+KPX k o -20
+KPX r o -20
+KPX v o -20
+KPX w o -20
+KPX x o -20
+KPX y o -20
+KPX z o -20
+KPX quoteleft o -80
+KPX quotedblleft o -100
+KPX quotedblright o -100
+KPX A q -20
+KPX F r -20
+KPX P r -20
+KPX T r -115
+KPX W r -20
+KPX quoteright r -30
+KPX r s 20
+KPX quoteright s -65
+KPX f t -35
+KPX r t 20
+KPX t t -35
+KPX quoteright t -20
+KPX A u -20
+KPX F u -20
+KPX K u -50
+KPX P u -20
+KPX T u -115
+KPX V u -40
+KPX W u -20
+KPX Y u -90
+KPX q u -20
+KPX A v -55
+KPX S v -20
+KPX a v -20
+KPX b v -20
+KPX e v -20
+KPX l v -20
+KPX n v -40
+KPX o v -20
+KPX r v 20
+KPX quoteright v -50
+KPX A w -55
+KPX K w -55
+KPX S w -20
+KPX T w -95
+KPX a w -20
+KPX e w -20
+KPX l w -20
+KPX n w -40
+KPX o w -20
+KPX r w 20
+KPX e x -20
+KPX o x -30
+KPX A y -55
+KPX C y -25
+KPX K y -65
+KPX L y -75
+KPX S y -20
+KPX T y -95
+KPX W y -20
+KPX X y -50
+KPX a y -20
+KPX b y -20
+KPX c y -20
+KPX e y -20
+KPX h y -40
+KPX l y -20
+KPX m y -40
+KPX n y -40
+KPX o y -20
+KPX p y -20
+KPX r y -20
+KPX w y 20
+KPX r z 20
+KPX space quotedblbase -50
+KPX A guilsinglleft -25
+KPX T guilsinglleft -150
+KPX V guilsinglleft -75
+KPX Y guilsinglleft -125
+KPX comma quoteleft -200
+KPX period quoteleft -225
+KPX A quoteleft -100
+KPX L quoteleft -225
+KPX quoteleft quoteleft -90
+KPX comma quoteright -200
+KPX period quoteright -225
+KPX A quoteright -100
+KPX L quoteright -225
+KPX R quoteright 20
+KPX h quoteright -40
+KPX r quoteright 20
+KPX s quoteright 20
+KPX quoteright quoteright -90
+KPX space quotedblleft -50
+KPX comma quotedblleft -400
+KPX period quotedblleft -325
+KPX A quotedblleft -150
+KPX L quotedblleft -300
+KPX o quotedblleft -30
+KPX comma quotedblright -400
+KPX period quotedblright -325
+KPX A quotedblright -150
+KPX L quotedblright -300
+KPX O quotedblright -25
+KPX f quotedblright -30
+KPX n quotedblright -30
+KPX o quotedblright -30
+KPX T guilsinglright -150
+KPX V guilsinglright -25
+KPX Y guilsinglright -100
+KPX A guillemotleft -50
+KPX T guillemotleft -175
+KPX V guillemotleft -75
+KPX W guillemotleft -40
+KPX Y guillemotleft -125
+KPX A guillemotright -25
+KPX T guillemotright -175
+KPX V guillemotright -50
+KPX W guillemotright -25
+KPX Y guillemotright -150
+KPX F agrave -15
+KPX T agrave -58
+KPX V agrave -38
+KPX T acircumflex -58
+KPX V acircumflex -38
+KPX F atilde -15
+KPX T atilde -58
+KPX V atilde -38
+KPX F adieresis -15
+KPX P adieresis -20
+KPX T adieresis -20
+KPX V adieresis -40
+KPX W adieresis -15
+KPX T aring -95
+KPX V aring -38
+KPX T egrave -86
+KPX V egrave -38
+KPX T ecircumflex -86
+KPX V ecircumflex -38
+KPX W ecircumflex -15
+KPX F edieresis -15
+KPX T edieresis -58
+KPX V edieresis -38
+KPX V icircumflex 4
+KPX T ograve -58
+KPX V ocircumflex -56
+KPX T odieresis -35
+KPX V odieresis -38
+KPX W odieresis -15
+KPX Y odieresis -113
+KPX T udieresis -40
+KPX W udieresis -15
+KPX Y udieresis -68
+EndKernPairs
+EndKernData
+EndFontMetrics

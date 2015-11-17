@@ -1,0 +1,5 @@
+AuthUserFile /www/htdocs/w006e175//amase/amasebasenew/usage//.htpasswd
+AuthGroupFile /dev/null
+AuthName ByPassword
+AuthType Basic
+require valid-user
