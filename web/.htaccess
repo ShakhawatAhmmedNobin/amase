@@ -14,6 +14,6 @@ AuthGroupFile /dev/null
 AuthName AmasebasePassword
 AuthType Basic
 <Limit GET POST>
-require user christos amsecretary amsoldera pskrieger amasegrades amaseLTU amaseLTUbc amaseLTUrf amaseLTUas amaseINPL  amaseINPLro amaseUPC amaseINPLds amaseUPCco amaseUPCnb amaseLTUaa amaseULds amaseLTUasa lwLTU violaNilsson elisabethNystrom Kostronor LTUMariaThor
+require user christos amsecretary amsoldera pskrieger amasegrades amaseLTU amaseLTUbc amaseLTUrf amaseLTUas amaseINPL  amaseINPLro amaseUPC amaseINPLds amaseUPCco amaseUPCnb amaseLTUaa amaseULds amaseLTUasa lwLTU violaNilsson elisabethNystrom Kostronor LTUMariaThor nobin
 </Limit>
 #</IfDefine>

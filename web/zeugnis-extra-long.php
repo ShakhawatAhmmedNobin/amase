@@ -113,8 +113,8 @@
     $module_summe_gradedEcts = 0.0;
     $module_summe_grades = 0.0;
 
-    $gradeSize = 8;
-    $courseSize = 10;
+    $gradeSize = 7;
+    $courseSize = 9;
 	$Partner_Uni = '';
 
     $tplidx = $pdf->ImportPage(2);
@@ -155,7 +155,7 @@ if ($start_year >= 2011){ //According to new regulations March 2011
         if  (mysql_num_rows($result_grades) != 0) {
             $pdf->rand();
             $pdf->SetFont('Univers57cn','b',$courseSize);
-            $pdf->Cell(130,7, $Mcourse,1,0,'L');
+            $pdf->Cell(130,6, $Mcourse,1,0,'L');
 			$modulX=$pdf->GetX();
             $modulY=$pdf->GetY();
             $pdf->Ln();
@@ -163,26 +163,26 @@ if ($start_year >= 2011){ //According to new regulations March 2011
             if($Mcourse == "Language"){
 			$text = "ECTS-Punkte in diesem Modul / Track:
 Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
-			$pdf->MultiCell(190,5,$text,1,'L');
+			$pdf->MultiCell(190,4,$text,1,'L');
 			}
 			elseif($Mcourse == "Module I: Structure & Properties"){
-			$pdf->Cell(190,5,"ECTS-Punkte in diesem Modul / Track:  (min-12 & max-15)",1,0,'L');
+			$pdf->Cell(190,4,"ECTS-Punkte in diesem Modul / Track:  (min-12 & max-15)",1,0,'L');
 			$pdf->Ln();
 			}
 			elseif($Mcourse == "Module II: Materials Characterization"){
-			$pdf->Cell(190,5,"ECTS-Punkte in diesem Modul / Track:  (min-5 & max-8)",1,0,'L');
+			$pdf->Cell(190,4,"ECTS-Punkte in diesem Modul / Track:  (min-5 & max-8)",1,0,'L');
 			$pdf->Ln();
 			}
 			elseif($Mcourse == "Module III: Materials Engineering & Processing Technologies"){
-			$pdf->Cell(190,5,"ECTS-Punkte in diesem Modul / Track:  (min-5 & max-8)",1,0,'L');
+			$pdf->Cell(190,4,"ECTS-Punkte in diesem Modul / Track:  (min-5 & max-8)",1,0,'L');
 			$pdf->Ln();
 			}
             elseif($Mcourse == "Zusaetzliche Leistung"){
-                $pdf->Cell(190,5,utf8_decode("Die Noten der Zusätzlichen Leistungen werden nicht in der Gesamtnote berücksichtigt."),1,0,'L');
+                $pdf->Cell(190,4,utf8_decode("Die Noten der Zusätzlichen Leistungen werden nicht in der Gesamtnote berücksichtigt."),1,0,'L');
                 $pdf->Ln();
             }
             elseif($Mcourse == "Voluntary Courses"){
-                $pdf->Cell(190,5,utf8_decode("Die ECTS-Punkte und Noten der Freiwilligen Leistungen werden nicht in der Gesamtnote berücksichtigt."),1,0,'L');
+                $pdf->Cell(190,4,utf8_decode("Die ECTS-Punkte und Noten der Freiwilligen Leistungen werden nicht in der Gesamtnote berücksichtigt."),1,0,'L');
                 $pdf->Ln();
             }
 
@@ -214,6 +214,7 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
 					elseif($student["university2"]== "UdS"){
 					if ($ects_sum_languages > 5) $ects_sum_languages = 5;
 					}
+
                 } else if (($row['modul'] != "Language") && ($row['status'] == "passed") && ($Mcourse != "Voluntary Courses")) {
                     $ects_sum_passed += $row['credits'];
                 }
@@ -223,16 +224,16 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
                 //		// Komplettsumme Credits
                 $pdf->rand();
                 $pdf->SetFont('Univers57cn','',$gradeSize);
-                $pdf->Cell(130,5, utf8_decode($row['coursename']),0,0,'L');
-                $pdf->Cell(20,5,$row['credits'] ,0,0,'C');
+                $pdf->Cell(130,4, utf8_decode($row['coursename']),0,0,'L');
+                $pdf->Cell(20,4,$row['credits'] ,0,0,'C');
 
                 // bestanden for passed. The actual grade for grade
                 if ( $row['status'] == "passed" ) $pdf->Cell(20,5,"bestanden",0,0,'C');
-                else $pdf->Cell(20,5,$row['local_grade'],0,0,'C');
+                else $pdf->Cell(20,4,$row['local_grade'],0,0,'C');
 
                 // ECTS-Grade
                 if ( $row['ects_grade'] == "not set" ) $pdf->Cell(20,5, "--", 0,0,'C');
-                else $pdf->Cell(20,5, $row['ects_grade'], 0,0,'C');
+                else $pdf->Cell(20,4, $row['ects_grade'], 0,0,'C');
 
                 $pdf->Ln();
             ###### One line
@@ -260,19 +261,19 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
 			}
             $pdf->SetFont('Univers57cn','b',$courseSize);
             if ($Mcourse == "Voluntary Courses") {
-                $pdf->Cell(20, 7,"--", 1, 0, 'C');
+                $pdf->Cell(20, 6,"--", 1, 0, 'C');
             } else if ($lastmod != "Language") {
-                $pdf->Cell(20,7, number_format( $module_ects, 1), 1, 0, 'C');
+                $pdf->Cell(20,6, number_format( $module_ects, 1), 1, 0, 'C');
             }else{
-                $pdf->Cell(20,7, number_format( $ects_sum_languages, 1), 1, 0, 'C');
+                $pdf->Cell(20,6, number_format( $ects_sum_languages, 1), 1, 0, 'C');
             }
             if ($module_summe_gradedEcts != 0.0 && $Mcourse !== "Zusaetzliche Leistung" && $Mcourse !== "Voluntary Courses") {
 		$average_master = number_format(floor(($module_summe_gradesXEctsGrades / $module_summe_gradedEcts)*10)/10, 1);
-                $pdf->Cell(20,7, substr( $average_master, 0, 3),1,0,'C');
+                $pdf->Cell(20,6, substr( $average_master, 0, 3),1,0,'C');
             }else{
-                $pdf->Cell(20,7, "--",1,0,'C');
+                $pdf->Cell(20,6, "--",1,0,'C');
             }
-            $pdf->Cell(20,7, "", 1, 0, 'C');
+            $pdf->Cell(20,6, "", 1, 0, 'C');
         ###### MODULE AVERAGE
 
             $pdf->SetXY($actX, $actY);
@@ -286,7 +287,7 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
 		if  (mysql_num_rows($result_check) != 0) {
 	         $pdf->rand();
             $pdf->SetFont('Univers57cn','b',$courseSize);
-           $pdf->Cell(130,7,"Partner Universities - ".$partner_uni['university'],1,0,'L');
+           $pdf->Cell(130,6,"Partner Universities - ".$partner_uni['university'],1,0,'L');
            $modulX=$pdf->GetX();
             $modulY=$pdf->GetY();
 			$Partner_Uni = $partner_uni['university'];
@@ -301,15 +302,15 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
 
         if($Mcourse == "Voluntary Courses"){
             $pdf->SetFont('Univers57cn', 'b', $gradeSize);
-            $pdf->Cell(130, 5, "Freiwillige Leistungen:", 0, 0, 'L');
+            $pdf->Cell(130, 4, "Freiwillige Leistungen:", 0, 0, 'L');
             $pdf->Ln();
             $pdf->SetFont('Univers57cn', '', $gradeSize);
-            $pdf->Cell(190,5,utf8_decode("Die ECTS-Punkte und Noten der Freiwilligen Leistungen werden nicht in der Gesamtnote berücksichtigt."),0,0,'L');
+            $pdf->Cell(190,4,utf8_decode("Die ECTS-Punkte und Noten der Freiwilligen Leistungen werden nicht in der Gesamtnote berücksichtigt."),0,0,'L');
             $pdf->Ln();
         }
         if($Mcourse == "Language"){
             $pdf->SetFont('Univers57cn', 'b', $gradeSize);
-            $pdf->Cell(130, 5, "Language:", 0, 0, 'L');
+            $pdf->Cell(130, 4, "Language:", 0, 0, 'L');
             $pdf->Ln();
             $pdf->SetFont('Univers57cn', '', $gradeSize);
         }
@@ -342,31 +343,31 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
                     //$row['coursename'] = preg_replace("/\r|\n/s", "",$row['coursename']). " - " . preg_replace("/\r|\n/s", "",$row2['english_description']);
                 }
                 if(strlen($row['coursename'])> 120){
-                    $pdf->Cell(130,5, substr(utf8_decode($row['coursename']),0,80),0,0,'L');
+                    $pdf->Cell(130,4, substr(utf8_decode($row['coursename']),0,80),0,0,'L');
                     $pdf->Ln();
-                    $pdf->Cell(130,5, substr(utf8_decode($row['coursename']),80),0,0,'L');
-                    $pdf->Cell(20,5,$row['credits'] ,0,0,'C');
+                    $pdf->Cell(130,4, substr(utf8_decode($row['coursename']),80),0,0,'L');
+                    $pdf->Cell(20,4,$row['credits'] ,0,0,'C');
 
                     // bestanden for passed. The actual grade for grade
                     if ( $row['status'] == "passed" ) $pdf->Cell(20,5,"bestanden",0,0,'C');
-                    else $pdf->Cell(20,5,$row['local_grade'],0,0,'C');
+                    else $pdf->Cell(20,4,$row['local_grade'],0,0,'C');
 
                     // ECTS-Grade
                     if ( $row['ects_grade'] == "not set" ) $pdf->Cell(20,5, "--", 0,0,'C');
-                    else $pdf->Cell(20,5, $row['ects_grade'], 0,0,'C');
+                    else $pdf->Cell(20,4, $row['ects_grade'], 0,0,'C');
 
                     $pdf->Ln();
                 }else{
-                    $pdf->Cell(130,5, utf8_decode($row['coursename']),0,0,'L');
-                    $pdf->Cell(20,5,$row['credits'] ,0,0,'C');
+                    $pdf->Cell(130,4, utf8_decode($row['coursename']),0,0,'L');
+                    $pdf->Cell(20,4,$row['credits'] ,0,0,'C');
 
                     // bestanden for passed. The actual grade for grade
                     if ( $row['status'] == "passed" ) $pdf->Cell(20,5,"bestanden",0,0,'C');
-                    else $pdf->Cell(20,5,$row['local_grade'],0,0,'C');
+                    else $pdf->Cell(20,4,$row['local_grade'],0,0,'C');
 
                     // ECTS-Grade
                     if ( $row['ects_grade'] == "not set" ) $pdf->Cell(20,5, "--", 0,0,'C');
-                    else $pdf->Cell(20,5, $row['ects_grade'], 0,0,'C');
+                    else $pdf->Cell(20,4, $row['ects_grade'], 0,0,'C');
 
                     $pdf->Ln();
                 }
@@ -374,7 +375,7 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
 			  elseif($row['modul'] == "Language"){
 			  $pdf->rand();
                 $pdf->SetFont('Univers57cn','b',$gradeSize);
-				//$pdf->Cell(130,5,"Language:",0,0,'L');
+				//$pdf->Cell(130,4,"Language:",0,0,'L');
 				//$pdf->Ln();
 				$query_coursename = "SELECT english_description FROM amase_courses WHERE local_description = '$row[coursename]' GROUP BY english_description";
                 $result_coursenames = mysql_query($query_coursename) OR die("Error: could not retrieve grades from database: " . mysql_error());
@@ -382,16 +383,16 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
                     //$row['coursename'] = $row['coursename']. " - " . $row2['english_description'];
                 }
 				$pdf->SetFont('Univers57cn','',$gradeSize);
-                $pdf->Cell(130,5, utf8_decode($row['coursename']),0,0,'L');
-                $pdf->Cell(20,5,$row['credits'] ,0,0,'C');
+                $pdf->Cell(130,4, utf8_decode($row['coursename']),0,0,'L');
+                $pdf->Cell(20,4,$row['credits'] ,0,0,'C');
 
                 // bestanden for passed. The actual grade for grade
-                if ( $row['status'] == "passed" ) $pdf->Cell(20,5,"bestanden",0,0,'C');
-                else $pdf->Cell(20,5,$row['local_grade'],0,0,'C');
+                if ( $row['status'] == "passed" ) $pdf->Cell(20,4,"bestanden",0,0,'C');
+                else $pdf->Cell(20,4,$row['local_grade'],0,0,'C');
 
                 // ECTS-Grade
-                if ( $row['ects_grade'] == "not set" ) $pdf->Cell(20,5, "--", 0,0,'C');
-                else $pdf->Cell(20,5, $row['ects_grade'], 0,0,'C');
+                if ( $row['ects_grade'] == "not set" ) $pdf->Cell(20,4, "--", 0,0,'C');
+                else $pdf->Cell(20,4, $row['ects_grade'], 0,0,'C');
 
                 $pdf->Ln();
 
@@ -412,14 +413,14 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
 		$partner_uni_ects += 30.0;
 		$pdf->SetFont('Univers57cn','b',$gradeSize);
 		$pdf->rand();
-		$pdf->Cell(190,5,"Masterarbeit:",0,0,'L');
+		$pdf->Cell(190,4,"Masterarbeit:",0,0,'L');
 		$pdf->Ln();
         $pdf->rand();
         $pdf->SetFont('Univers57cn','',$gradeSize);
         $x=$pdf->GetX();
         $y=$pdf->GetY();
         $master['projectname'] = preg_replace("/\r|\n/s", "", $row['projectname']);  // Title
-        $pdf->MultiCell(130,5,"Thema: " . utf8_decode($row['projectname']),0,'L');
+        $pdf->MultiCell(130,4,"Thema: " . utf8_decode($row['projectname']),0,'L');
         $x = $x + 130;
         $y_master=$pdf->GetY(); // Untere Kante des Titels merken
         $pdf->SetXY($x,$y);
@@ -427,8 +428,8 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
                 else {
          $masterEndnote = substr((((float)$master['examiner_grade1'] + (float)$master['examiner_grade2']) / 2 ),0,3);
 		 }
-        $pdf->Cell(20,5,"30",0,0,'C');  // ECTS points for Master Thesis
-        $pdf->Cell(20,5,$masterEndnote ,0,0,'C');   // Grade from the 2 examiners for the Master Thesis
+        $pdf->Cell(20,4,"30",0,0,'C');  // ECTS points for Master Thesis
+        $pdf->Cell(20,4,$masterEndnote ,0,0,'C');   // Grade from the 2 examiners for the Master Thesis
         $pdf->SetXY($pdf->GetX(),$y_master); // Zur unteren Kante des Titels springen
 
 		}
@@ -436,10 +437,10 @@ Im 1. und 2. Semester: min-7 & max-9; Im 3. Semester: min-3 & max-5";
             $actY=$pdf->GetY();
             $pdf->SetXY($modulX, $modulY);
 			$pdf->SetFont('Univers57cn','b',$courseSize);
-            $pdf->Cell(20,7, number_format( $partner_uni_ects, 1), 1, 0, 'C');
-			if ($module_summe_gradedEcts != 0.0)  $pdf->Cell(20,7, substr(number_format( ($module_summe_gradesXEctsGrades/$module_summe_gradedEcts) ,2), 0, 3),1,0,'C');
-            else $pdf->Cell(20,7, "--",1,0,'C');
-            $pdf->Cell(20,7, "", 1, 0, 'C');
+            $pdf->Cell(20,6, number_format( $partner_uni_ects, 1), 1, 0, 'C');
+			if ($module_summe_gradedEcts != 0.0)  $pdf->Cell(20,6, substr(number_format( ($module_summe_gradesXEctsGrades/$module_summe_gradedEcts) ,2), 0, 3),1,0,'C');
+            else $pdf->Cell(20,6, "--",1,0,'C');
+            $pdf->Cell(20,6, "", 1, 0, 'C');
 			 $pdf->SetXY($actX, $actY);
 
 }

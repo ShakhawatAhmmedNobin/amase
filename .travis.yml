@@ -1,0 +1,5 @@
+language: php
+sudo: false
+install: true
+jdk: oraclejdk8
+script: ./travis.sh

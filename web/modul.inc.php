@@ -373,6 +373,7 @@
                     echo "<br/>";
                     echo "<a href=\"zeugnis.php?id=" . $student_id . "\" alt=\"German Zeugnis\" title=\"German Zeugnis\">Zeugnis</a> ";
                     echo "<a href=\"zeugnis-long.php?id=" . $student_id . "\" alt=\"German Long Zeugnis\" title=\"German Long Zeugnis\">(X)</a> ";
+                    echo "<a href=\"zeugnis-extra-long.php?id=" . $student_id . "\" alt=\"German Extra Long Zeugnis\" title=\"German Long Zeugnis\">(XXL)</a> ";
                     echo "<br/>";
                     echo "<a href=\"supplement.php?id=" . $student_id . "\" alt=\"Diploma Supplement\" 
                         title=\"Diploma Supplement\" target=\"_blanc\">Supplement</a>";
@@ -389,11 +390,31 @@
             }else{                   
                 echo "<img class=\"actions\" src=\"./icons/info.png\" alt=\"Student information\" 
                     title=\"Student information\" onclick=\"info_popup(" . $student_id . ")\">\n";
+                    //adding this for users from different uni
+                if ($_SESSION['html_template'] == COURSES_TEMPLATE && check_for_edit_permission($id)) {
+                	echo "<img class=\"actions\" src=\"./icons/edit.png\" ALT=\"edit Record\" 
+                    TITLE=\"edit\" onclick=\"javascript:poptastic('edit.php?id=$id&amp;mode=edit')\">";
+                }
             }
             echo "</td>\n";
         }
     }
-    
+    //04062018 adding this function to check users from different uni as they can only have the access to their own uni. 
+	function check_for_edit_permission($course_id){
+    	
+    	$resultCourseUni = mysql_query("select university from amase_courses where university = (select firma from amase_users WHERE id= " .$_SESSION["user_ID"]. 								") and id = ".$course_id.";");
+		
+        if ($resultCourseUni) {
+            $rowCourseUni = mysql_fetch_assoc($resultCourseUni);
+            if($rowCourseUni['university'] == $_SESSION["user_firma"]){
+            	return true;
+            }else{
+            	return false;
+            }
+        }else{
+        	return false;
+        }
+    }
     /**
      * Gibt die Tabellenueberschriften aus und formatiert sie
      **/ 
@@ -1089,160 +1110,95 @@
 		}
 
 		return $newpass;
-	}    
+	}
 
-	function convert_grade($grade, $university){
+function convert_grade($grade2, $university)
+{
 
-        if($grade == "passed"){
-            return $grade;
+    if ($grade2 == "passed") {
+        return $grade2;
+    }
+
+    $grade = floatval($grade2);
+    if ($university == "LTU") {
+        if ($grade >= 5.0) {
+            return '1.0';
+        } elseif ($grade >= 4.0) {
+            return '1.7';
+        } elseif ($grade >= 3.0) {
+            return '2.3';
+        } elseif ($grade >= 2.0) {
+            return '3.0';
+        } elseif ($grade >= 1.0) {
+            return '3.7';
+        }
+    } elseif ($university == "UPC") {
+        if ($grade >= 9.8) {
+            return '1.0';
+        } elseif ($grade >= 9.2) {
+            return '1.3';
+        } elseif ($grade >= 8.6) {
+            return '1.7';
+        } elseif ($grade >= 8.1) {
+            return '2.0';
+        } elseif ($grade >= 7.5) {
+            return '2.3';
+        } elseif ($grade >= 7.0) {
+            return '2.7';
+        } elseif ($grade >= 6.5) {
+            return '3.0';
+        } elseif ($grade >= 5.9) {
+            return '3.3';
+        } elseif ($grade >= 5.3) {
+            return '3.7';
+        } elseif ($grade >= 5.0) {
+            return '4.0';
+        }
+    } elseif ($university == "UL") {
+        if ($grade >= 16.0) {
+            return '1.0';
+        } elseif ($grade >= 15.0) {
+            return '1.3';
+        } elseif ($grade >= 14.0) {
+            return '2.0';
+        } elseif ($grade >= 13.0) {
+            return '2.3';
+        } elseif ($grade >= 12.0) {
+            return '3.0';
+        } elseif ($grade >= 11.0) {
+            return '3.3';
+        } elseif ($grade >= 6.8) {
+            return '4.0';
+        } elseif ($grade >= 1.0) {
+            return '5.0';
+        }
+    } elseif ($university == "UDS") {
+        if ($grade >= 5.0) {
+            return '5.0';
+        } elseif ($grade >= 4.0) {
+            return '4.0';
+        } elseif ($grade >= 3.7) {
+            return '3.7';
+        } elseif ($grade >= 3.3) {
+            return '3.3';
+        } elseif ($grade >= 3.0) {
+            return '3.0';
+        } elseif ($grade >= 2.7) {
+            return '2.7';
+        } elseif ($grade >= 2.3) {
+            return '2.3';
+        } elseif ($grade >= 2.0) {
+            return '2.0';
+        } elseif ($grade >= 1.7) {
+            return '1.7';
+        } elseif ($grade >= 1.3) {
+            return '1.3';
+        } elseif ($grade >= 1.0) {
+            return '1.0';
         }
 
-		if($university=="LTU")
-				{ 
-				   if( $grade >= '5.0')
-				      {
-					   return '1.0';
-					   }
-				  elseif( $grade >= '4.0')
-				      {
-					   return '1.7';
-					   }
-				 elseif( $grade >= '3.0')
-				      {
-					   return '2.3';
-					   }
-				 elseif( $grade >= '2.0')
-				      {
-					   return '3.0';
-					   }
-			     elseif( $grade >= '1.0')
-				      {
-					   return '3.7';
-					   }
-				}
-				elseif($university=="UPC")
-				{ 
-				   if( $grade >= '9.8' || $grade >= '9.9' || $grade >= '10.0')
-				      {
-					   return '1.0';
-					   }
-				  elseif( $grade >= '9.2' || $grade >= '9.3' || $grade >= '9.4' || $grade >= '9.5' || $grade >= '9.6' || $grade >= '9.7' )
-				      {
-					   return '1.3';
-					   }
-				 elseif( $grade >= '8.6' || $grade >= '8.7' || $grade >= '8.8' || $grade >= '8.9' || $grade >= '9.0' || $grade >= '9.1' )
-				      {
-					   return '1.7';
-					   }
-				 elseif( $grade >= '8.1' || $grade >= '8.2' || $grade >= '8.3' || $grade >= '8.4' || $grade >= '8.5' || $grade >= '8.6' )
-				      {
-					   return '2.0';
-					   }
-			     elseif( $grade >= '7.5' || $grade >= '7.6' || $grade >= '7.7' || $grade >= '7.8' || $grade >= '7.9' || $grade >= '8.0' )
-				      {
-					   return '2.3';
-					   }
-				elseif( $grade >= '7.0' || $grade >= '7.1' || $grade >= '7.2' || $grade >= '7.3' || $grade >= '7.4')
-				      {
-					   return '2.7';
-					   }
-				elseif( $grade >= '6.5' || $grade >= '6.6' || $grade >= '6.7' || $grade >= '6.8' || $grade >= '6.9')
-				      {
-					   return '3.0';
-					   }
-				elseif( $grade >= '5.9' || $grade >= '6.0' || $grade >= '6.1' || $grade >= '6.2' || $grade >= '6.3' || $grade >= '6.4' )
-				      {
-					   return '3.3';
-					   }
-				elseif($grade >= '5.3' || $grade >= '5.4' || $grade >= '5.5' || $grade >= '5.6' || $grade >= '5.7' || $grade >= '5.8' )
-				      {
-					   return '3.7';
-					   }
-				elseif($grade >= '5.0' || $grade >= '5.1' || $grade >= '5.2' )
-				      {
-					   return '4.0';
-					   }
-				}
-				elseif($university=="UL")
-				{
-				if( $grade >= '16.0')
-				      {
-					   return '1.0';
-					   }
-				  elseif( $grade >= '15.0')
-				      {
-					   return '1.3';
-					   }
-				 elseif( $grade >= '14.0')
-				      {
-					   return '2.0';
-					   }
-				 elseif( $grade >= '13.0')
-				      {
-					   return '2.3';
-					   }
-			     elseif( $grade >= '12.0')
-				      {
-					   return '3.0';
-					   }
-				elseif( $grade >= '11.0')
-				      {
-					   return '3.3';
-					   }
-				elseif( $grade >= '10.0')
-				      {
-					   return '4.0';
-					   }
-				}
-				elseif($university=="UDS")
-				{
-				if( $grade >= '5.0')
-				      {
-					   return '5.0';
-					   }
-				  elseif( $grade >= '4.0')
-				      {
-					   return '4.0';
-					   }
-				 elseif( $grade >= '3.7')
-				      {
-					   return '3.7';
-					   }
-				 elseif( $grade >= '3.3')
-				      {
-					   return '3.3';
-					   }
-			     elseif( $grade >= '3.0')
-				      {
-					   return '3.0';
-					   }
-				 elseif( $grade >= '2.7')
-				      {
-					   return '2.7';
-					   }
-				 elseif( $grade >= '2.3')
-				      {
-					   return '2.3';
-					   }
-			     elseif( $grade >= '2.0')
-				      {
-					   return '2.0';
-					   }
-				 elseif( $grade >= '1.7')
-				      {
-					   return '1.7';
-					   }
-				 elseif( $grade >= '1.3')
-				      {
-					   return '1.3';
-					   }
-			     elseif( $grade >= '1.0')
-				      {
-					   return '1.0';
-					   }
-				
-				}
-
-	}
+    }
+    //return "2.0";
+}
 
 ?>

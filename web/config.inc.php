@@ -77,7 +77,7 @@
     $templateArray = array($template0, $template1, $template2, $template3, $template4);		
     #### Templates
 
-    // Suchfelder für Volltextsuche in Tabellen. For template 0, 1, 2, 3
+    // Suchfelder fï¿½r Volltextsuche in Tabellen. For template 0, 1, 2, 3
     $search_string = array( "id, vorname, nachname, country_birth, birth_place, email", "id, name, coursename, modul, university" , 
                             "id, name, projectname, wer", "english_description, local_description, code, university",
                             "fullname, firma, status");
@@ -132,7 +132,8 @@
             "Track 3: High Performing Surfaces - Coating, structuring & functionalization", 
             "Track 4: Materials Engineering and Manufacturing Technologies", 
             "Track 5: Bio/Nanomaterials (including special applications)",
-             "Special courses", "Language", "Zusaetzliche Leistung", "Freiwillige Zusatzkurse"); // added by manpreet
+            "Special courses", "Language", "Zusaetzliche Leistung", "Freiwillige Zusatzkurse",
+            "Voluntary Courses"); // added by manpreet
 	
 	
     // All the modules/ tracks/ languages
@@ -144,9 +145,9 @@
             "Track 3: High Performing Surfaces - Coating, structuring & functionalization", 
             "Track 4: Materials Engineering and Manufacturing Technologies", 
             "Track 5: Bio/Nanomaterials (including special applications)",
-			"Zusaetzliche Leistung", "Freiwillige Zusatzkurse"); 
+			"Zusaetzliche Leistung", "Freiwillige Zusatzkurse","Voluntary Courses");
     
-        // Notendruck für Master-Zeugnis
+        // Notendruck fï¿½r Master-Zeugnis
     static $PrintTranscriptCourses = array ("Module 1", "Module 2", "Module 3", "Module 4", "Language", "Special courses", "Module I", "Module II", 
             "Module III", "Track 1: Advanced Metallic Materials - Design, characterization and processing", 
             "Track 2: Polymers and Composites - Modelling, processing & tailored properties",
@@ -168,7 +169,9 @@
     static $parse_status_master = array("open", "grade", "failed"); // status of a master thesis
     
     static $parse_ects_grade = array("not set"=>"not set", "A"=>"A", "B"=>"B", "C"=>"C", "D"=>"D", "E"=>"E", "F"=>"F", "FX"=>"FX"); // ECTS note
-    static $parse_start_semester = array("2005WS", "2006WS", "2007WS", "2008WS", "2009WS", "2010WS", "2011WS", "2012WS", "2013WS", "2014WS", "2015WS", "2016WS");
+    static $parse_start_semester = array("2005WS", "2006WS", "2007WS", "2008WS", "2009WS", "2010WS", "2011WS", "2012WS", "2013WS", "2014WS",
+                                         "2015WS", "2016WS", "2017WS", "2018WS", "2019WS", "2020WS", "2021WS", "2022WS", "2023WS", "2024WS",
+                                         "2025WS", "2026WS", "2027WS", "2028WS", "2029WS", "2030WS", "2031WS", "2032WS", "2033WS", "2034WS",);
     static $parse_semester = array("1", "2", "3");
     
     static $parse_date_months = array('01'=>'January', '02'=>'February', '03'=>'March', '04'=>'April', '05'=>'May', '06'=>'June', '07'=>'July', 
@@ -181,12 +184,12 @@
     }
     
     static $parse_date_years = array();
-    for ($i=1960; $i<=2000; $i++) {
+    for ($i=1960; $i<=2020; $i++) {
         $parse_date_years["$i"] = "$i";
     }
     
     static $parse_date_years_ex = array();
-    for ($i=2006; $i<=2017; $i++) {
+    for ($i=2006; $i<=2035; $i++) {
         $parse_date_years_ex["$i"] = "$i";
     }
     
@@ -227,7 +230,7 @@
    
     $query = "SELECT * FROM ";  // Default Query
 
-    // Konstanten für Logging-Funktion (log_this)
+    // Konstanten fï¿½r Logging-Funktion (log_this)
     define('CHANGE', 0);
     define('INSERT', 1);
     define('DELETE', 2);

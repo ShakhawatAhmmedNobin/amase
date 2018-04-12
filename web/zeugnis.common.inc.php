@@ -100,4 +100,14 @@ function queryGrades($studentID){
     return mysql_query($query) OR die("Error: could not load students grades: " . mysql_error());
 }
 
+/**
+ * @param $studentID
+ * @return resource
+ */
+function queryMaster($studentID){
+    $query3 = "SELECT * FROM amase_master WHERE student_id='$studentID' AND university='UdS' AND status='grade';";
+    $result3 = mysql_query($query3) OR die("Error: could not load students grades: " . mysql_error());
+    return $result3;
+}
+
 ?>

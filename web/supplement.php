@@ -1,5 +1,5 @@
 <?php
-
+    header("Content-Type: text/html;charset=UTF-8");
     define('_VALID_INCLUDE', TRUE);
 
     $fontprefixfix = "/www/htdocs/w006e175/amase/amasebase2/pdf/font/"; 
@@ -16,30 +16,36 @@
 
 
 ######## DEFINES
-    $_unistatus1 = "Universit‰t des ";
+    $_unistatus1 = utf8_decode("Universit√§t des ");
     $_unistatus12 = "Saarlandes (UdS) ";
 	$_unistatus13 = "University / ";
 	$_unistatus14 = "State Institution";
-    $_unistatus2 = "LuleÂ tekniska ";
+
+    $_unistatus2 = utf8_decode("Lule√• tekniska ");
     $_unistatus22 = "universitet (LTU) ";
 	$_unistatus23 = "University / ";
 	$_unistatus24 = "State Institution";
-    $_unistatus3 = "Universitat PolitËcnica ";
+
+    $_unistatus3 = utf8_decode("Universitat Polit√®cnica ");
     $_unistatus32 = "de Catalunya (UPC) ";
 	$_unistatus33 = "University / ";
 	$_unistatus34 = "State Institution";
-    $_unistatus4 = "UniversitÈ de ";
+
+    $_unistatus4 = utf8_decode("Universit√© de ");
     $_unistatus42 = "Lorraine (UL) ";
 	$_unistatus43 = "Grande Ecole / ";
 	$_unistatus44 = "State Institution";
 
-    $_uniname1 = "Universit‰t des ";
+    $_uniname1 = utf8_decode("Universit√§t des ");
     $_uniname12 = "Saarlandes";
-    $_uniname2 = "LuleÂ tekniska ";
+
+    $_uniname2 = utf8_decode("Lule√• tekniska ");
     $_uniname22 = "universitet";
-    $_uniname3 = "Universitat PolitËc";
-    $_uniname32 = "nica de Catalunya";
-    $_uniname4 = "UniversitÈ de ";
+
+    $_uniname3 = utf8_decode("Universitat Polit√®cnica");
+    $_uniname32 = "de Catalunya";
+
+    $_uniname4 = utf8_decode("Universit√© de ");
     $_uniname42 = "Lorraine";
 
     $_unicountry1= "Germany";
@@ -61,9 +67,12 @@
     } else $id = $_GET['id'];
 
     if ( !isset($_POST['fourthuni'])) {
-            echo '<html>
+            echo ('<html>
+
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <meta charset="UTF-8">
+     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
 <body align="center">
     <form class="form-horizontal" action="supplement.php?id='.$id.'" method="post">
@@ -87,9 +96,9 @@
 
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="issuedate">Ausstelldatum</label>  
+              <label class="col-md-4 control-label" for="issuedate">Datum der letzten Pr√ºfungsleistung</label>  
               <div class="col-md-4">
-              <input id="issuedate" name="issuedate" type="text" placeholder="today" class="form-control input-md" required="">
+              <input id="issuedate" name="issuedate" type="text" placeholder="(February 21, 2015)" class="form-control input-md" required="">
               <span class="help-block">help</span>  
               </div>
             </div>
@@ -132,7 +141,7 @@
 
             <!-- Text input-->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="line5">Masterís Degree Certificate UdS - </label>  
+              <label class="col-md-4 control-label" for="line5">Master\'s Degree Certificate UdS - </label>  
               <div class="col-md-4">
               <input id="line5" name="line5" type="text" placeholder="(February 21, 2015)" class="form-control input-md">
               <span class="help-block">Zeile 5</span>  
@@ -141,12 +150,12 @@
 
             <!-- Select Basic -->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="line6choice">Hier w‰hlen</label>
+              <label class="col-md-4 control-label" for="line6choice">Hier w√§hlen</label>
               <div class="col-md-4">
                 <select id="line6choice" name="line6choice" class="form-control">
-                  <option value="Examensbevis - LTU">Examensbevis - LTU</option>
-                  <option value="ExpediciÛn de titulos acadÈmicos - UPC">ExpediciÛn de titulos acadÈmicos - UPC</option>
-                  <option value="Attestation de rÈussite au diplome - UL">Attestation de rÈussite au diplome - UL</option>
+                  <option value="a">Examensbevis - LTU</option>
+                  <option value="b">Expedici√≥n de titulos acad√©micos - UPC</option>
+                  <option value="c">Attestation de r√©ussite au diplome - UL</option>
                 </select>
               </div>
             </div>
@@ -155,7 +164,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="line6">Wahl oben</label>  
               <div class="col-md-4">
-              <input id="line6" name="line6" type="text" placeholder="(12th díoctubre de 2014)" class="form-control input-md">
+              <input id="line6" name="line6" type="text" placeholder="(12th d\'octubre de 2014)" class="form-control input-md">
               <span class="help-block">Zeile 6</span>  
               </div>
             </div>
@@ -190,19 +199,26 @@
 
 </body>
 </html>
-            ';
+            ');
             die();
     } else {
         $fourthuni = $_POST['fourthuni'];
         $issuedate = $_POST['issuedate'];
-        $line1 = $_POST['line1'];
-        $line2 = $_POST['line2'];
-        $line3 = $_POST['line3'];
-        $line4 = $_POST['line4'];
-        $line5 = $_POST['line5'];
+        $line1 = utf8_decode($_POST['line1']);
+        $line2 = utf8_decode($_POST['line2']);
+        $line3 = utf8_decode($_POST['line3']);
+        $line4 = utf8_decode($_POST['line4']);
+        $line5 = utf8_decode($_POST['line5']);
         $line6choice = $_POST['line6choice'];
-        $line6 = $_POST['line6'];
-        $line7 = $_POST['line7'];
+        if($line6choice == "a"){
+            $line6choice = "Examensbevis - LTU";
+        }elseif($line6choice == "b"){
+            $line6choice = "Expedici√≥n de titulos acad√©micos - UPC";
+        }elseif($line6choice == "c"){
+            $line6choice = "Attestation de r√©ussite au diplome - UL";
+        }
+        $line6 = utf8_decode($_POST['line6']);
+        $line7 = utf8_decode($_POST['line7']);
         $signdate = $_POST['signdate'];
     }
 
@@ -217,7 +233,7 @@
     list($year, $month, $day) = split('-', $student['birth_date']); // Geburtsdatum
     $student['birth_date'] = date("d.m.Y", mktime(0, 0, 0, $month, $day, $year));
     
-    // Universit‰t Volle Bezeichnung
+    // UniversitÔøΩt Volle Bezeichnung
     if ( $student['university1'] == 'UdS') {
             $uni1status	= $_unistatus1;
             $uni1status2 = $_unistatus12;
@@ -342,7 +358,7 @@ class fpdf_amase extends fpdi {
 
 $pdf= new fpdf_amase();
 
-$pagecount = $pdf->setSourceFile("./pdf/Diploma Supplement5.pdf");
+$pagecount = $pdf->setSourceFile("./pdf/Diploma Supplement11.pdf");
 
 $tplidx = $pdf->ImportPage(1);
 $pdf->addPage();
@@ -352,31 +368,31 @@ $pdf->AddFont('Univers55','B','univers55b.php');
 $pdf->AddFont('Univers57cn','','univers57cn.php');
 $pdf->AddFont('Univers57cn','B','univers57cnb.php');
 
-$pdf->SetFont('Univers55','B',9);
+$pdf->SetFont('Univers55','B',8);
 
 $studFullName = " " . utf8_decode($student['vorname']) . " " . utf8_decode($student['nachname']) . 
 	" has followed the academic path outlined below:";
 $nameLen    =  $pdf->GetStringWidth($studFullName);
 
 $pdf->SetXY(45, 94); 
-$pdf->Write(10, "Family Name: ".utf8_decode($student['vorname']));
+$pdf->Write(10, "Family Name: ".utf8_decode($student['nachname']));
 
 $pdf->SetXY(45, 106); 
-$pdf->Write(10, "Given Name: ".utf8_decode($student['nachname']));
+$pdf->Write(10, "Given Name: ".utf8_decode($student['vorname']));
 
 $pdf->SetXY(45, 118); 
 $pdf->Write(10, "Date of Birth (day/month/year): ".$student['birth_date']);
 
 $pdf->SetXY(45, 124); 
-$pdf->Write(10, "Place of Birth: ".$student['birth_place']);
+$pdf->Write(10, "Place of Birth: ".utf8_decode($student['birth_place']));
 
 $pdf->SetXY(45, 131); 
 $pdf->Write(10, "Nationality: ".$student['nationality']);
 
-$pdf->SetXY(89, 143); 
+$pdf->SetXY(91, 142);
 $pdf->Write(10, $student['university1'].": ".$student['matrikel1']);
 
-$pdf->SetXY(90, 149); 
+$pdf->SetXY(92, 147.5);
 $pdf->Write(10, $student['university2'].": ".$student['matrikel2']);
 
 $pdf->SetXY(
@@ -384,21 +400,23 @@ $pdf->SetXY(
 $pdf->Write(10, $studFullName);
 
 
+$extraYOffset = 3;
+
 $pdf->SetFont('Univers55','',9);
 for ($i=0; $i < 2; $i++) { 
-    $offset = $i*16+5;
+    $offset = $i*16+$extraYOffset;
     $pdf->SetXY(62, 176+$offset); 
     $pdf->Write(10, $uni1name);
     $pdf->SetXY(62, 180+$offset); 
     $pdf->Write(10, $uni1name2);
 	
-    $pdf->SetXY(95, 173+$offset); 
+    $pdf->SetXY(100, 173+$offset);
     $pdf->Write(10, $uni1status);
-    $pdf->SetXY(95, 176+$offset); 
+    $pdf->SetXY(100, 176+$offset);
     $pdf->Write(10, $uni1status2);
-	$pdf->SetXY(95, 179+$offset); 
+	$pdf->SetXY(100, 179+$offset);
     $pdf->Write(10, $uni1status3);
-    $pdf->SetXY(95, 182+$offset); 
+    $pdf->SetXY(100, 182+$offset);
     $pdf->Write(10, $uni1status4);
 	
     $pdf->SetXY(140, 178+$offset); 
@@ -408,19 +426,19 @@ for ($i=0; $i < 2; $i++) {
 }
 
 
-    $offset = 0*22+5;
+    $offset = 0*22+$extraYOffset+1;
     $pdf->SetXY(62, 211+$offset); 
     $pdf->Write(10, $uni2name);
     $pdf->SetXY(62, 215+$offset); 
     $pdf->Write(10, $uni2name2);
 	
-    $pdf->SetXY(95, 206+$offset); 
+    $pdf->SetXY(100, 206+$offset);
     $pdf->Write(10, $uni2status);
-    $pdf->SetXY(95, 209+$offset); 
+    $pdf->SetXY(100, 209+$offset);
     $pdf->Write(10, $uni2status2);
-	$pdf->SetXY(95, 212+$offset); 
+	$pdf->SetXY(100, 212+$offset);
     $pdf->Write(10, $uni2status3);
-    $pdf->SetXY(95, 215+$offset); 
+    $pdf->SetXY(100, 215+$offset);
     $pdf->Write(10, $uni2status4);
 	
     $pdf->SetXY(140, 212+$offset); 
@@ -429,19 +447,19 @@ for ($i=0; $i < 2; $i++) {
     $pdf->Write(10, $uni2lang);
 
 
-    $offset = 1*22+5;
+    $offset = 1*22+$extraYOffset+2;
     $pdf->SetXY(62, 211+$offset); 
     $pdf->Write(10, $uni3name);
     $pdf->SetXY(62, 215+$offset); 
     $pdf->Write(10, $uni3name2);
     
-    $pdf->SetXY(95, 206+$offset); 
+    $pdf->SetXY(100, 206+$offset);
     $pdf->Write(10, $uni3status);
-    $pdf->SetXY(95, 209+$offset); 
+    $pdf->SetXY(100, 209+$offset);
     $pdf->Write(10, $uni3status2);
-    $pdf->SetXY(95, 212+$offset); 
+    $pdf->SetXY(100, 212+$offset);
     $pdf->Write(10, $uni3status3);
-    $pdf->SetXY(95, 215+$offset); 
+    $pdf->SetXY(100, 215+$offset);
     $pdf->Write(10, $uni3status4);
     
     $pdf->SetXY(140, 212+$offset); 
@@ -455,7 +473,7 @@ for ($i=0; $i < 2; $i++) {
 
     $pdf->SetFont('Univers55','B',10);
 
-    $pdf->SetXY(62, 39); 
+    $pdf->SetXY(60, 35.3);
     $pdf->Write(10, $issuedate);
 
 for ($i=3; $i < 6; $i++) { 
@@ -468,7 +486,7 @@ for ($i=3; $i < 6; $i++) {
     $pdf->addPage();
     $pdf->useTemplate($tplidx);
 
-    $pdf->SetFont('Univers55','',8.5);
+    $pdf->SetFont('Univers55','',10);
 
     $pdf->SetXY(45, 69); 
     $pdf->Write(10, $line1);
@@ -483,10 +501,10 @@ for ($i=3; $i < 6; $i++) {
     $pdf->Write(10, "Transcript of Records UdS - ".$line4);
 
     $pdf->SetXY(45, 85); 
-    $pdf->Write(10, "Masterís Degree Certificate UdS - ".$line5);
+    $pdf->Write(10, "Master's Degree Certificate UdS - ".$line5);
 
     $pdf->SetXY(45, 89); 
-    $pdf->Write(10, $line6choice." - ".$line6);
+    $pdf->Write(10, utf8_decode($line6choice." - ".$line6));
 
     $pdf->SetXY(45, 93); 
     $pdf->Write(10, $line7);
@@ -496,7 +514,7 @@ for ($i=3; $i < 6; $i++) {
     $pdf->SetXY(83, 99); 
     $pdf->Write(10, $signdate);
 
-for ($i=7; $i < 9; $i++) { 
+for ($i=7; $i <= 9; $i++) { 
     $tplidx = $pdf->ImportPage($i);
     $pdf->addPage();
     $pdf->useTemplate($tplidx);

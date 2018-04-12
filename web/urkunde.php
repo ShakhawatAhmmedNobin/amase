@@ -95,9 +95,9 @@
         
     $start_year = substr($student['start_semester'], 0, 4); // for new exam regulations 2011 (added by manpreet)
 	if ($start_year >= 2011){
-    $pagecount = $pdf->setSourceFile("./pdf/Urkunde-Muster_new_2014.pdf");
+    $pagecount = $pdf->setSourceFile("./pdf/Urkunde-Muster-neu v3.pdf");
 	}else{	
-    $pagecount = $pdf->setSourceFile("./pdf/Urkunde-Muster_2014.pdf");
+    $pagecount = $pdf->setSourceFile("./pdf/Urkunde-Muster-old v2.pdf");
 	}
    
 
@@ -124,17 +124,20 @@
     $pdf->Write(10, $studFullName);
     $pdf->SetTextColor(0);
     
-    $pdf->SetXY(108.0, 197.7); 
-    $pdf->SetFont('Univers55','',11.9);
+    $pdf->SetXY(108, 198);
+    $pdf->SetFont('Univers55','',12);
     $pdf->Write(10,$ihm_oder_ihr);
 
     $pdf->SetXY(0, 130); // Geburtsdaten   
     $pdf->SetFont('Univers57cn','',12);
     $pdf->MultiCell(210,5,"geboren am " . $student['birth_date'] . "\n" .  "in " .  utf8_decode($student['geburtsort']) . ", " .  utf8_decode($student['geburtsland']) . "\n",0,'C'); 
 
-    $pdf->SetXY(0, 228); // Letztes Prüfungsdatum
+    $pdf->SetXY(0, 228); // Letztes Prï¿½fungsdatum
     $pdf->SetFont('Univers57cn','',13);
-    $pdf->MultiCell(207,4,"Datum der letzten Prüfungsleistung: " . $latest_date . "\n\nSaarbrücken, den " . date("d.m.Y"),0,'C');
+
+    $printDate = date("d.m.Y");
+    //$printDate = "01.12.2016";
+    $pdf->MultiCell(207,4,utf8_decode("Datum der letzten PrÃ¼fungsleistung: ") . $latest_date . utf8_decode("\n\nSaarbrÃ¼cken, den ") . $printDate,0,'C');
 
     $pdf->Output();
 ?>

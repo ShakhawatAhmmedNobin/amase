@@ -54,6 +54,7 @@
                             $_SESSION['username'] =  $result['email'];
                             $_SESSION['user_ID'] = $result['id'];
                             $_SESSION['user_status'] = $result['status'];
+                            $_SESSION['user_firma'] = $result['firma'];
                             log_user(1);
                             unset ($passwort);
                             unset ($username);

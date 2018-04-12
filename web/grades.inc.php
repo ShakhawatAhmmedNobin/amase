@@ -15,9 +15,14 @@
     
   	function isValidGrade ($uni, $grade) {
 		global $inpl2norm, $uds2norm, $ltu2norm, $upc2norm;
-		
-		if ( !is_string($uni) ) { die ("isValidGrade: datatypes missmatch (uni) - ". gettype($uni) ); }
-		if ( !is_float($grade) ) { die ("isValidGrade: datatypes missmatch (grade) - ". gettype($grade)); }
+		if($grade == "passed"){
+			return true;
+		}
+        $grade = (float)$grade;
+		if ( !is_string($uni) ) { 
+			die ("isValidGrade: datatypes missmatch (uni) - ". gettype($uni) ); }
+		if ( !is_float($grade) ) {
+			die ("isValidGrade: datatypes missmatch (grade) - ". gettype($grade)); }
 		
 		// echo "<br>grade: $grade - $uni<br>";
 		
